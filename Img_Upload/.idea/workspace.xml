@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c27e169b-a28b-4605-b700-51cbd41a8c41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/upload_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/send_file.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Scrapy_CaiJing/Scrapy_CaiJing/spiders/grasp_eastmoney.py" beforeDir="false" />
-    </list>
+    <list default="true" id="c27e169b-a28b-4605-b700-51cbd41a8c41" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649346380301</updated>
       <workItem from="1649346382160" duration="1536000" />
-      <workItem from="1649384542032" duration="7679000" />
+      <workItem from="1649384542032" duration="7690000" />
     </task>
     <servers />
   </component>
