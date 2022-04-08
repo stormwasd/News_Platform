@@ -1,3 +1,15 @@
+"""
+@Description :
+@File        : upload
+@Project     : Img_Upload
+@Time        : 2022/4/8 15:00
+@Author      : LiHouJian
+@Software    : PyCharm
+@issue       :
+@change      :
+@reason      :
+"""
+
 from flask import Flask, jsonify
 from flask import request
 import os
