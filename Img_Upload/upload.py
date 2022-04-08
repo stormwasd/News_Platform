@@ -4,14 +4,11 @@ from flask import request
 import os
 from datetime import datetime
 import random
-import requests
 
 # 路径配置
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
-
-# img = open('./IMG_4006.JPG', "rb")
 
 
 # 上传图潘test接口
@@ -19,7 +16,6 @@ app = Flask(__name__)
 def upload():
     # 获取文件列表
     f = request.files.get('file')
-    # f = request.files.get(img)
     # 返回文件列表
     refile = []
     # 获取安全文件名
@@ -31,7 +27,7 @@ def upload():
     file_path = basedir + '/static/file/' + filename
     f.save(file_path)
     # 配置成对应外网访问的连接
-    my_host = "http://127.0.0.1:5000"
+    my_host = "http://175.24.172.64:5000"
     new_path_file = my_host + '/static/file/' + filename
     refile.append(new_path_file)
     data = {"msg": "success", "url": refile}
