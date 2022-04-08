@@ -13,15 +13,15 @@ SPIDER_MODULES = ['Scrapy_CaiJing.spiders']
 NEWSPIDER_MODULE = 'Scrapy_CaiJing.spiders'
 ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
-   'Scrapy_test.middlewares.RandomUserAgentMiddleware': 543,
-   'Scrapy_test.middlewares.ProxyMiddleware': 544
+   'Scrapy_CaiJing.middlewares.RandomUserAgentMiddleware': 543,
+   'Scrapy_CaiJing.middlewares.ProxyMiddleware': 544
 }
 MONGO_DB_URL = '175.24.172.64'
 MONGO_DB_PORT = 27017
 MONGO_DB_NAME = 'News_Dbs'
 MONGODB_DOCNAME = 'CaiJing_DB'
 ITEM_PIPELINES = {
-    'Scrapy_test.pipelines.ScrapyCaijingPipeline': 300,
+    'Scrapy_CaiJing.pipelines.ScrapyCaijingPipeline': 300,
 }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

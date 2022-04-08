@@ -136,4 +136,4 @@ class ProxyMiddleware():
     def process_request(self, request, spider):
         url = 'http://192.168.3.85:5010/get/'
         proxy = requests.get(url).json().get("proxy")
-        request.meta['proxy'] = proxy
+        request.meta['proxy'] = 'http://'+proxy
