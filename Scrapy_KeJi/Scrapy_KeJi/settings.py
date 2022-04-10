@@ -1,4 +1,4 @@
-# Scrapy settings for Scrapy_CaiJing project
+# Scrapy settings for Scrapy_KeJi project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,28 +7,29 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'Scrapy_CaiJing'
+BOT_NAME = 'Scrapy_KeJi'
 
-SPIDER_MODULES = ['Scrapy_CaiJing.spiders']
-NEWSPIDER_MODULE = 'Scrapy_CaiJing.spiders'
+SPIDER_MODULES = ['Scrapy_KeJi.spiders']
+NEWSPIDER_MODULE = 'Scrapy_KeJi.spiders'
 ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
-   'Scrapy_CaiJing.middlewares.RandomUserAgentMiddleware': 543
-   # 'Scrapy_CaiJing.middlewares.ProxyMiddleware': 544
+   'Scrapy_KeJi.middlewares.RandomUserAgentMiddleware': 543
+   # 'Scrapy_KeJi.middlewares.ProxyMiddleware': 544
 }
 MONGO_DB_URL = '175.24.172.64'
 MONGO_DB_PORT = 27017
 MONGO_DB_NAME = 'News_Dbs'
-MONGODB_DOCNAME = 'CaiJing_DB'
+MONGODB_DOCNAME = 'KeJi_DB'
 ITEM_PIPELINES = {
-    'Scrapy_CaiJing.pipelines.ScrapyCaijingPipeline': 300,
+    'Scrapy_KeJi.pipelines.ScrapyKejiPipeline': 300,
 }
 
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'Scrapy_CaiJing (+http://www.yourdomain.com)'
+#USER_AGENT = 'Scrapy_KeJi (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -56,13 +57,13 @@ ITEM_PIPELINES = {
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'Scrapy_CaiJing.middlewares.ScrapyCaijingSpiderMiddleware': 543,
+#    'Scrapy_KeJi.middlewares.ScrapyKejiSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'Scrapy_CaiJing.middlewares.ScrapyCaijingDownloaderMiddleware': 543,
+#    'Scrapy_KeJi.middlewares.ScrapyKejiDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -74,7 +75,7 @@ ITEM_PIPELINES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'Scrapy_CaiJing.pipelines.ScrapyCaijingPipeline': 300,
+#    'Scrapy_KeJi.pipelines.ScrapyKejiPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
