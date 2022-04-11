@@ -20,6 +20,8 @@ MONGO_DB_URL = '175.24.172.64'
 MONGO_DB_PORT = 27017
 MONGO_DB_NAME = 'News_Dbs'
 MONGODB_DOCNAME = 'KeJi_DB'
+MONGO_DB_USERNAME = 'storm'
+MONGO_DB_PASSWORD = '98765432.zx'
 ITEM_PIPELINES = {
     'Scrapy_KeJi.pipelines.ScrapyKejiPipeline': 300,
 }

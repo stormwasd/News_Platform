@@ -134,6 +134,7 @@ class RandomUserAgentMiddleware:
 # Proxy
 class ProxyMiddleware():
     def process_request(self, request, spider):
-        url = 'http://192.168.3.85:5010/get/'
+        # url = 'http://192.168.3.85:5010/get/'
+        url = 'http://175.24.172.64:5010/get/'
         proxy = requests.get(url).json().get("proxy")
         request.meta['proxy'] = 'http://'+proxy
