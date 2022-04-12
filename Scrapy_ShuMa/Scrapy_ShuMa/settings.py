@@ -11,13 +11,26 @@ BOT_NAME = 'Scrapy_ShuMa'
 
 SPIDER_MODULES = ['Scrapy_ShuMa.spiders']
 NEWSPIDER_MODULE = 'Scrapy_ShuMa.spiders'
-
+ROBOTSTXT_OBEY = False
+DOWNLOADER_MIDDLEWARES = {
+   'Scrapy_ShuMa.middlewares.RandomUserAgentMiddleware': 543
+   # 'Scrapy_CaiJing.middlewares.ProxyMiddleware': 544
+}
+MONGO_DB_URL = '175.24.172.64'
+MONGO_DB_PORT = 27017
+MONGO_DB_NAME = 'News_Dbs'
+MONGODB_DOCNAME = 'ShuMa_DB'
+MONGO_DB_USERNAME = 'storm'
+MONGO_DB_PASSWORD = '98765432.zx'
+ITEM_PIPELINES = {
+    'Scrapy_ShuMa.pipelines.ScrapyShuMaPipeline': 300,
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'Scrapy_ShuMa (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
