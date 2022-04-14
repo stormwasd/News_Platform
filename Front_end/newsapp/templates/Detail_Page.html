@@ -1,0 +1,33 @@
+{% extends 'Base.html' %}
+{% block content %}
+<div class="container">
+
+    <div class="blog-header">
+    </div>
+
+    <div class="row">
+        <div class="col-sm-18 blog-main">
+
+            <div class="blog-post">
+                <h3 class="blog-post-title">{{ single_data.title }}</h3>
+                <p class="blog-post-meta">{{ single_data.issue_time }} by <a
+                        href="{{ single_data.content_url }}">{{ single_data.information_source }}</a></p>
+                                <div>
+                                    {% autoescape off %}
+                                    {{ single_data.content }}
+                                    {% endautoescape %}
+                                </div>
+            </div><!-- /.blog-post -->
+
+{#            <nav>#}
+{#                <ul class="pager">#}
+{#                    <li><a href="#">Previous</a></li>#}
+{#                    <li><a href="#">Next</a></li>#}
+{#                </ul>#}
+{#            </nav>#}
+
+        </div><!-- /.blog-main -->
+
+    </div><!-- /.row -->
+</div><!-- /.container -->
+{% endblock %}
