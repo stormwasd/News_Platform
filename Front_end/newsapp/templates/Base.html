@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/blog/">
+{#    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/blog/">#}
 
     <title>Blog Template for Bootstrap</title>
 
@@ -18,25 +18,24 @@
           rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{% static 'css/Custom_For_ThiseWeb.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Custom_For_ThisWeb.css' %}">
 </head>
 
 <body>
 
 <div class="blog-masthead">
     <div class="container">
-        <nav class="blog-nav">
-            {#          <a class="blog-nav-item active" href="#">Home</a>#}
-            <a class="blog-nav-item" href="" target="_self">首页</a>
-            <a class="blog-nav-item" href="http://127.0.0.1:8000/caijing_news" target="_self">财经</a>
-            <a class="blog-nav-item" href="#">科技</a>
-            <a class="blog-nav-item" href="#">娱乐</a>
-            <a class="blog-nav-item" href="#">体育</a>
-            <a class="blog-nav-item" href="#">时尚</a>
-            <a class="blog-nav-item" href="#">美食</a>
-            <a class="blog-nav-item" href="#">国际</a>
-            <a class="blog-nav-item" href="#">养生</a>
-            <a class="blog-nav-item" href="#">旅游</a>
+        <nav class="blog-nav col-md-10">
+            <a class="blog-nav-item" href="/home" target="_self">首页</a>
+            <a class="blog-nav-item" href="/News_?cate=财经" target="_self">财经</a>
+            <a class="blog-nav-item" href="/News_?cate=科技" target="_self">科技</a>
+            <a class="blog-nav-item" href="/News_?cate=娱乐" target="_self">娱乐</a>
+            <a class="blog-nav-item" href="/News_?cate=体育" target="_self">体育</a>
+            <a class="blog-nav-item" href="/News_?cate=时尚" target="_self">时尚</a>
+            <a class="blog-nav-item" href="/News_?cate=美食" target="_self">美食</a>
+            <a class="blog-nav-item" href="/News_?cate=国际" target="_self">国际</a>
+            <a class="blog-nav-item" href="/News_?cate=养生" target="_self">养生</a>
+            <a class="blog-nav-item" href="/News_?cate=旅游" target="_self">旅游</a>
         </nav>
     </div>
 </div>
@@ -44,16 +43,6 @@
 <div>
 {% block content %}{% endblock %}
 </div>
-
-<footer class="blog-footer navbar-fixed-bottom">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.
-    </p>
-    <p>
-        <a href="#">Back to top</a>
-    </p>
-</footer>
-
-{#your code here#}
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -63,7 +52,5 @@
         crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/dist/js/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

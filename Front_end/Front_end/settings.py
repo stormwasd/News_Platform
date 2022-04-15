@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&3k1qf=il1iv376czi$jn$+-iqnuo5=$z&n^v46=-!)ho0%zu0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'Front_end.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',  # 使用djongo库
+        # 'ENGINE': 'djongo',  # 使用djongo库
         'NAME': 'News_Dbs',  # 数据库名
         # 设置
         'CLIENT': {

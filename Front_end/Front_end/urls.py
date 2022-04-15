@@ -19,14 +19,8 @@ from newsapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index),
-    path('show_news/', views.show_news),
-    path('test/', views.test),
-    path('test2/', views.test2),
-    path('test3/', views.test3),
-    path('', views.Front_Page),
-    path('home/', views.Home_Page),
-    # path('caijing_news/', views.caijing_news),
-    # path('caijing_news_more')
-    path('Show_Detail(?id=<str:news_str>&cate=<str:cate_str>)', views.Show_Detail)
+    path('', views.Front_Page),  # 显示欢迎页面，点击欢迎页面将转到首页(home/)
+    path('home/', views.Home_Page),  # 首页将显示最新资讯，点击首页将刷新
+    path('Show_Detail/', views.Show_Detail),  # 每条资讯的详情
+    path('News_/', views.News)  # 资讯列表页
 ]

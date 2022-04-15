@@ -7,11 +7,11 @@
 
     <div class="row">
 
-        <div class="col-sm-18 blog-main">
+        <div class="blog-main">
 
-            <div class="blog-post">
+            <div class="blog-post col-md-12">
                 {% for data in data_list %}
-                    <h3 class="blog-post-title"><a href="http://127.0.0.1:8000/Show_Detail?id={{ data.news_id }}&cate={{ data.category }}">{{ data.title }}</a></h3>
+                    <h3 class="blog-post-title-home"><a href="/Show_Detail?news_id={{ data.news_id }}&cate={{ data.category }}">{{ data.title }}</a></h3>
                     <p class="blog-post-meta">{{ data.issue_time }} by <a href="{{ data.content_url }}">{{ data.information_source }}</a></p>
                 {% endfor %}
             </div><!-- /.blog-post -->
