@@ -33,10 +33,12 @@ class GraspNewsCncnSpider(scrapy.Spider):
             yield req
 
     def parse(self, response):
-        url_list = response.xpath("//ul[@class='news_list']/li/a[@class='r']/@href").extract()
+        url_list = response.xpath(
+            "//ul[@class='news_list']/li/a[@class='r']/@href").extract()
         titles = response.xpath(
             "//ul[@class='news_list']/li/a[@class='r']/text()").extract()
-        pub_time_list = response.xpath("//ul[@class='news_list']/li/font/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul[@class='news_list']/li/font/text()").extract()
         for i in range(len(url_list)):
             url = url_list[i]
             req = scrapy.Request(
@@ -56,7 +58,8 @@ class GraspNewsCncnSpider(scrapy.Spider):
         source = response.xpath(
             "//span[@class='ml20']/text()").extract_first().strip('来源：')
         content = ''.join(response.xpath("//div[@class='con']").extract())
-        content_img = response.xpath("//div[@class='con']/p/img/@src").extract()
+        content_img = response.xpath(
+            "//div[@class='con']/p/img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
