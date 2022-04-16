@@ -1,13 +1,13 @@
 """
-@Description : 
+@Description :
 @File        : grasp_chinanews
 @Project     : Scrapy_JunShi
 @Time        : 2022/4/12 17:52
 @Author      : LiHouJian
 @Software    : PyCharm
-@issue       : 
-@change      : 
-@reason      : 
+@issue       :
+@change      :
+@reason      :
 """
 
 import scrapy
@@ -26,10 +26,12 @@ class GraspChinaSpider(scrapy.Spider):
     }
 
     def parse(self, response):
-        url_list = response.xpath("//ul/li/div[@class='dd_bt']/a/@href").extract()
+        url_list = response.xpath(
+            "//ul/li/div[@class='dd_bt']/a/@href").extract()
         titles = response.xpath(
             "//ul/li/div[@class='dd_bt']/a/text()").extract()
-        pub_time_list = response.xpath("//ul/li/div[@class='dd_time']/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul/li/div[@class='dd_time']/text()").extract()
         for i in range(len(url_list)):
             url = 'https://www.chinanews.com.cn' + url_list[i]
             req = scrapy.Request(
@@ -51,7 +53,8 @@ class GraspChinaSpider(scrapy.Spider):
         if len(source) == 0:
             source = None
         content = ''.join(response.xpath("//div[@class='left_zw']").extract())
-        content_img = response.xpath("//div[@class='left_zw']//img/@src").extract()
+        content_img = response.xpath(
+            "//div[@class='left_zw']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
