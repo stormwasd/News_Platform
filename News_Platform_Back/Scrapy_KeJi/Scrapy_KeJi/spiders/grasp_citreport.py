@@ -26,7 +26,8 @@ class GraspCitreportSpider(scrapy.Spider):
     }
 
     def parse(self, response):
-        url_list = response.xpath("//div[@class='article-item']/div[@class='article-info']/a[2]/@href").extract()
+        url_list = response.xpath(
+            "//div[@class='article-item']/div[@class='article-info']/a[2]/@href").extract()
         titles = response.xpath(
             "//div[@class='article-item']/div[@class='article-info']/a/h3[@class='multiline-text-overflow']/text()").extract()
         pub_time_list = response.xpath(
@@ -42,7 +43,8 @@ class GraspCitreportSpider(scrapy.Spider):
             req.meta.update({"title": title})
             req.meta.update({"pub_time": pub_time.split(' ')[0]})
             yield req
-        next_url = response.xpath("//div[@class='pg']/a[@class='nxt']/@href").extract()
+        next_url = response.xpath(
+            "//div[@class='pg']/a[@class='nxt']/@href").extract()
         if next_url:
             yield scrapy.Request(url=next_url[-1], callback=self.parse, dont_filter=True)
 
@@ -52,8 +54,10 @@ class GraspCitreportSpider(scrapy.Spider):
         pub_time = response.meta['pub_time']
         source = response.xpath(
             "//div[@class='cl']/p[@class='authors']/span[2]/text()").extract_first().split(': ')[1]
-        content = ''.join(response.xpath("//div[@class='post-content clearfix']|//section[@class='content']|//td[@id='article_content']").extract())
-        content_img = response.xpath("//tr/td[@id='article_content']/div[@id='copy_area']/p/img/@src|//td[@id='article_content']/p/img/@src|//section[@class='content']//img/@src").extract()
+        content = ''.join(response.xpath(
+            "//div[@class='post-content clearfix']|//section[@class='content']|//td[@id='article_content']").extract())
+        content_img = response.xpath(
+            "//tr/td[@id='article_content']/div[@id='copy_area']/p/img/@src|//td[@id='article_content']/p/img/@src|//section[@class='content']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
