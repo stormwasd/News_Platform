@@ -36,7 +36,8 @@ class Grasp3233Spider(scrapy.Spider):
         url_list = response.xpath("//div[@class='bd']/ul/li/a/@href").extract()
         titles = response.xpath(
             "//div[@class='bd']/ul/li/a/span[@class='h5']/text()").extract()
-        pub_time_list = response.xpath("//div[@class='bd']/ul/li/a/div[@class='list2_sjfx']/span[1]/text()").extract()
+        pub_time_list = response.xpath(
+            "//div[@class='bd']/ul/li/a/div[@class='list2_sjfx']/span[1]/text()").extract()
         for i in range(len(url_list)):
             url = url_list[i]
             req = scrapy.Request(
@@ -55,13 +56,16 @@ class Grasp3233Spider(scrapy.Spider):
         pub_time = response.meta['pub_time']
         source = response.xpath(
             "//div[@class='f-content']/span[@class='g-bianji']/em[2]/a/text()").extract_first()
-        content = ''.join(response.xpath("//div[@class='u-content']").extract())
-        content_img = response.xpath("//div[@class='u-content']//img/@src").extract()
+        content = ''.join(response.xpath(
+            "//div[@class='u-content']").extract())
+        content_img = response.xpath(
+            "//div[@class='u-content']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
                 img_name = title + str(index)
-                res = upload_file.send_file('http:' + value, img_name, self.headers)
+                res = upload_file.send_file(
+                    'http:' + value, img_name, self.headers)
                 if res['msg'] == 'success':
                     content = content.replace(value, res['url'][0])
                     content_img_list.append(res['url'][0])
