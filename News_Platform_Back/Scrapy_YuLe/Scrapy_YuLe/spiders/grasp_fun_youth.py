@@ -36,7 +36,8 @@ class GraspFunYouthSpider(scrapy.Spider):
         url_list = response.xpath("//ul[@class='tj3_1']/li/a/@href").extract()
         titles = response.xpath(
             "//ul[@class='tj3_1']/li/a/text()").extract()
-        pub_time_list = response.xpath("//ul[@class='tj3_1']/li/font/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul[@class='tj3_1']/li/font/text()").extract()
         for i in range(len(url_list)):
             url = 'http://fun.youth.cn/gnzx' + url_list[i].lstrip('.')
             req = scrapy.Request(
@@ -56,13 +57,18 @@ class GraspFunYouthSpider(scrapy.Spider):
         source = response.xpath(
             "//span[@id='source_baidu']/text()").extract_first().split('：')[1].strip()
         content = ''.join(response.xpath("//div[@id='container']").extract())
-        content_img = response.xpath("//div[@id='container']/div[@class='TRS_Editor']/p/img/@src").extract()
+        content_img = response.xpath(
+            "//div[@id='container']/div[@class='TRS_Editor']/p/img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
                 img_name = title + str(index)
                 if value.startswith('.'):
-                    res = upload_file.send_file('https://image11.m1905.cn/uploadfile' + value.lstrip('.'), img_name, self.headers)
+                    res = upload_file.send_file(
+                        'https://image11.m1905.cn/uploadfile' +
+                        value.lstrip('.'),
+                        img_name,
+                        self.headers)
                 else:
                     res = upload_file.send_file(value, img_name, self.headers)
                 if res['msg'] == 'success':
@@ -96,5 +102,3 @@ class GraspFunYouthSpider(scrapy.Spider):
 if __name__ == '__main__':
     import scrapy.cmdline as cmd
     cmd.execute(['scrapy', 'crawl', 'grasp_fun_youth'])
-
-
