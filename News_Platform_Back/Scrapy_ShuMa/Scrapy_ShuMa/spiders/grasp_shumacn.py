@@ -33,10 +33,12 @@ class GraspShumacnSpider(scrapy.Spider):
             yield req
 
     def parse(self, response):
-        url_list = response.xpath("//article[@class='excerpt excerpt-1']/header/h2/a/@href").extract()
+        url_list = response.xpath(
+            "//article[@class='excerpt excerpt-1']/header/h2/a/@href").extract()
         titles = response.xpath(
             "//article[@class='excerpt excerpt-1']/header/h2/a/text()").extract()
-        pub_time_list = response.xpath("//article[@class='excerpt excerpt-1']/p[@class='meta']/time/font/text()").extract()
+        pub_time_list = response.xpath(
+            "//article[@class='excerpt excerpt-1']/p[@class='meta']/time/font/text()").extract()
         for i in range(len(url_list)):
             url = url_list[i]
             req = scrapy.Request(
@@ -54,7 +56,8 @@ class GraspShumacnSpider(scrapy.Spider):
         title = response.meta['title']
         pub_time = response.meta['pub_time']
         content = ''.join(response.xpath("//div[@class='nrgz']").extract())
-        content_img = response.xpath("//div[@class='nrgz']//img/@src").extract()
+        content_img = response.xpath(
+            "//div[@class='nrgz']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
