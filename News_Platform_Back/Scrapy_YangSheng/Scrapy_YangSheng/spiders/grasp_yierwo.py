@@ -36,7 +36,8 @@ class GraspYierwoSpider(scrapy.Spider):
         url_list = response.xpath("//li/h3/a/@href").extract()
         titles = response.xpath(
             "//li/h3/a/text()").extract()
-        pub_time_list = response.xpath("//ul[@class='listtxt']/li/span/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul[@class='listtxt']/li/span/text()").extract()
         for i in range(len(url_list)):
             url = 'http://www.yierwo.com.cn' + url_list[i]
             req = scrapy.Request(
@@ -54,7 +55,8 @@ class GraspYierwoSpider(scrapy.Spider):
         title = response.meta['title']
         pub_time = response.meta['pub_time']
         content = ''.join(response.xpath("//div[@class='content']").extract())
-        content_img = response.xpath("//div[@id='content']//img/@src").extract()
+        content_img = response.xpath(
+            "//div[@id='content']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
