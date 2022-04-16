@@ -1,13 +1,13 @@
 """
-@Description : 
+@Description :
 @File        : grasp_world_people
 @Project     : Scrapy_GuoJi
 @Time        : 2022/4/12 16:07
 @Author      : LiHouJian
 @Software    : PyCharm
-@issue       : 
-@change      : 
-@reason      : 
+@issue       :
+@change      :
+@reason      :
 """
 
 import scrapy
@@ -31,10 +31,12 @@ class GraspWorldPeopleSpider(scrapy.Spider):
             yield req
 
     def parse(self, response):
-        url_list = response.xpath("//ul[@class='list_ej2  mt20']/li/a/@href").extract()
+        url_list = response.xpath(
+            "//ul[@class='list_ej2  mt20']/li/a/@href").extract()
         titles = response.xpath(
             "//ul[@class='list_ej2  mt20']/li/a/text()").extract()
-        pub_time_list = response.xpath("//ul[@class='list_ej2  mt20']/li/i/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul[@class='list_ej2  mt20']/li/i/text()").extract()
         for i in range(len(url_list)):
             url = 'http://world.people.com.cn' + url_list[i]
             req = scrapy.Request(
@@ -53,7 +55,8 @@ class GraspWorldPeopleSpider(scrapy.Spider):
         pub_time = response.meta['pub_time']
         source = response.xpath(
             "//div[@class='col-1-1 fl']/a/text()").extract_first()
-        content = ''.join(response.xpath("//div[@class='rm_txt_con cf']").extract())
+        content = ''.join(response.xpath(
+            "//div[@class='rm_txt_con cf']").extract())
 
         item = ScrapyGuojiItem()
         item['news_id'] = news_id
