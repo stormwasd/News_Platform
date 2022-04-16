@@ -32,10 +32,12 @@ class GraspIcySpider(scrapy.Spider):
             yield req
 
     def parse(self, response):
-        url_list = response.xpath("//div[@class='news-word fr']/p/a[@class='fl']/@href").extract()
+        url_list = response.xpath(
+            "//div[@class='news-word fr']/p/a[@class='fl']/@href").extract()
         titles = response.xpath(
             "//div[@class='news-word fr']/p/a[@class='fl']/text()").extract()
-        pub_time_list = response.xpath("//div[@class='news-word fr']/p/span[@class='fr']/text()").extract()
+        pub_time_list = response.xpath(
+            "//div[@class='news-word fr']/p/span[@class='fr']/text()").extract()
         for i in range(len(url_list)):
             url = url_list[i]
             req = scrapy.Request(
@@ -54,8 +56,10 @@ class GraspIcySpider(scrapy.Spider):
         pub_time = response.meta['pub_time']
         source = response.xpath(
             "//div[@class='news-title']/p/span[1]/text()").extract_first().lstrip('来源：')
-        content = ''.join(response.xpath("//div[@class='news-content']").extract())
-        content_img = response.xpath("//div[@class='news-content']/p/img/@src").extract()
+        content = ''.join(response.xpath(
+            "//div[@class='news-content']").extract())
+        content_img = response.xpath(
+            "//div[@class='news-content']/p/img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
