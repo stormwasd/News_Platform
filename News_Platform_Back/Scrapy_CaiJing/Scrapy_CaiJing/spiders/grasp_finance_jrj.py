@@ -1,13 +1,13 @@
 """
-@Description : 
+@Description :
 @File        : grasp_finance_jrj
 @Project     : Scrapy_CaiJing
 @Time        : 2022/4/8 15:49
 @Author      : LiHouJian
 @Software    : PyCharm
-@issue       : 
-@change      : 
-@reason      : 
+@issue       :
+@change      :
+@reason      :
 """
 
 import scrapy
@@ -35,7 +35,8 @@ class GraspFinanceJrjSpider(scrapy.Spider):
         url_list = response.xpath("//ul[@class='list2']/li/a/@href").extract()
         titles = response.xpath(
             "//ul[@class='list2']/li/a/text()").extract()
-        pub_time_list = response.xpath("//ul[@class='list2']/li/i/text()").extract()
+        pub_time_list = response.xpath(
+            "//ul[@class='list2']/li/i/text()").extract()
         for i in range(len(url_list)):
             url = url_list[i]
             req = scrapy.Request(
@@ -49,7 +50,8 @@ class GraspFinanceJrjSpider(scrapy.Spider):
             yield req
         # next_url = response.xpath("//div[@class='news-box']/ul[@class='pagination']/li[last()]/a/@href").extract()
         # if next_url:
-        # 	yield scrapy.Request(url= next_url[-1], callback=self.parse, dont_filter=True)
+        # yield scrapy.Request(url= next_url[-1], callback=self.parse,
+        # dont_filter=True)
 
     def parse_detail(self, response):
         news_id = response.meta['news_id']
@@ -57,8 +59,10 @@ class GraspFinanceJrjSpider(scrapy.Spider):
         pub_time = response.meta['pub_time']
         source = response.xpath(
             "//p[@class='inftop']/span/i/a/text()").extract_first()
-        content = ''.join(response.xpath("//div[@class='texttit_m1']").extract())
-        content_img = response.xpath("//div[@class='texttit_m1']//img/@src").extract()
+        content = ''.join(response.xpath(
+            "//div[@class='texttit_m1']").extract())
+        content_img = response.xpath(
+            "//div[@class='texttit_m1']//img/@src").extract()
         if content_img:
             content_img_list = list()
             for index, value in enumerate(content_img):
