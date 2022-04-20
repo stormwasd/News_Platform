@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="https://fastly.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.35/favicon.ico">
-{#    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/blog/">#}
+    {#    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/blog/">#}
 
     <title>Blog Template for Bootstrap</title>
 
@@ -25,7 +25,7 @@
 
 <div class="blog-masthead">
     <div class="container">
-        <nav class="blog-nav col-md-10">
+        <nav class="blog-nav col-md-12">
             <a class="blog-nav-item" href="/home" target="_self">首页</a>
             <a class="blog-nav-item" href="/News_?cate=财经" target="_self">财经</a>
             <a class="blog-nav-item" href="/News_?cate=科技" target="_self">科技</a>
@@ -36,12 +36,27 @@
             <a class="blog-nav-item" href="/News_?cate=国际" target="_self">国际</a>
             <a class="blog-nav-item" href="/News_?cate=养生" target="_self">养生</a>
             <a class="blog-nav-item" href="/News_?cate=旅游" target="_self">旅游</a>
+            {#            <form role="search" method="get" id="searchform" action="#">#}
+            {#                <input type="search" name="q" placeholder="搜索" required>#}
+            {#                <button type="submit"><span class="btn-primary"></span></button>#}
+            {#            </form>#}
+            <form action="#" method="get" role="search" id="searchform">
+            <div class="col-lg-6">
+                <div class="input-group">
+
+                    <input type="text" class="form-control" placeholder="请输入关键词" name="KeyWorlds">
+                    <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="">Go!</button>
+      </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+                </form>
         </nav>
     </div>
 </div>
 
 <div>
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 </div>
 
 <!-- Bootstrap core JavaScript

@@ -49,3 +49,8 @@ def News(request):
                       'previous': previous_page
                   }
                   )
+
+def search(request):
+    words = request.GET.get('KeyWorlds')
+
+

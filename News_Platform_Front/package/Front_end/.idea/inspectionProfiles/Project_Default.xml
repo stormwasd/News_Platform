@@ -14,6 +14,7 @@
         <list>
           <option value="int.__getitem__" />
           <option value="list.replace" />
+          <option value="Scrapy_GuoJi.items" />
         </list>
       </option>
     </inspection_tool>
