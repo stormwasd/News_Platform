@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96b8fc28-0c49-4766-8386-2b3e440036d3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="27c0yFkOnDq0O1WAWAOMshvssn6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Scrapy_ShuMa" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PythonWrokSpace\myScrapyproject\News_Platform\Scrapy_KeJi\Scrapy_KeJi" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="grasp_citreport" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Scrapy_KeJi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrapy_KeJi/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrapy_KeJi/spiders/grasp_citreport.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.grasp_citreport" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96b8fc28-0c49-4766-8386-2b3e440036d3" name="Default Changelist" comment="" />
+      <created>1649604319399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649604319399</updated>
+      <workItem from="1649604321022" duration="5608000" />
+      <workItem from="1649774646365" duration="1867000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="122" key="#xdebugger.evaluate" timestamp="1649607569732">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="524" y="122" key="#xdebugger.evaluate/0.0.1536.834@0.0.1536.834" timestamp="1649607569732" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1649776513405">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1649776513405" />
+    <state width="1493" height="256" key="GridCell.Tab.0.bottom" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.0.center" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.0.left" timestamp="1649609938477">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1649609938477" />
+    <state width="1493" height="256" key="GridCell.Tab.0.right" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.1.center" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.1.left" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="1493" height="256" key="GridCell.Tab.1.right" timestamp="1649609938478">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="256" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1649609938478" />
+    <state width="775" height="424" key="XDebugger.FullValuePopup" timestamp="1649607541543">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="775" height="424" key="XDebugger.FullValuePopup/0.0.1536.834@0.0.1536.834" timestamp="1649607541543" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="&lt;200 https://www.citreport.com/news/171198-1.html&gt;" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Scrapy_KeJi$grasp_citreport.coverage" NAME="grasp_citreport Coverage Results" MODIFIED="1649608635961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Scrapy_KeJi/spiders" />
+  </component>
+</project>

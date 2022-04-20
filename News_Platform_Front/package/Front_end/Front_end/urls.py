@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.Front_Page),  # 显示欢迎页面，点击欢迎页面将转到首页(home/)
     path('home/', views.Home_Page),  # 首页将显示最新资讯，点击首页将刷新
     path('Show_Detail/', views.Show_Detail),  # 每条资讯的详情
-    path('News_/', views.News)  # 资讯列表页
+    path('News_/', views.News),  # 资讯列表页
+    path('Search/', views.Search)
 ]

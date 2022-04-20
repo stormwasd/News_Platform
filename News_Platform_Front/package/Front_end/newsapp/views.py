@@ -1,4 +1,5 @@
-from django.shortcuts import render
+import urllib
+from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from Front_end.DjangoMongo import Get_data_from_mongo
 from django.core.paginator import Paginator
 
@@ -27,7 +28,7 @@ def News(request):
     else:
         page = 1
     news_interval = Get_data_from_mongo().get_info(cate)
-    # Paginator()接收两个参数，一个是数组另一个是每一页的数目
+    # Paginator()接收两个参数，一个是列表另一个是每一页的数目
     paginator = Paginator(news_interval, 20)
     page_num = paginator.num_pages  # 获得分页数量,count()还可以获取内容总数
     page_news_list = paginator.page(page)  # 指定页数后的内容列表
@@ -50,7 +51,52 @@ def News(request):
                   }
                   )
 
-def search(request):
-    words = request.GET.get('KeyWorlds')
 
+def Search(request):
+    keywords = request.GET.get('keywords')
+    print('-----------------------------------------')
+    print(keywords)
+    origin_str = urllib.parse.unquote(keywords)
+    # print('-----------------------------------------')
+    # print(origin_str)
+    page = request.GET.get('page')
+    if page:
+        page = int(page)
+    else:
+        page = 1
+    # news_interval = Get_data_from_mongo().get_info(cate)
+    the_fuzzy_data = Get_data_from_mongo().get_the_fuzzy_data(origin_str)
+    for item in the_fuzzy_data:
+        item['Keywords'] = keywords
+    # print(the_fuzzy_data)
+    # print(the_fuzzy_data)
+    # Paginator()接收两个参数，一个是列表另一个是每一页的数目
+    paginator = Paginator(the_fuzzy_data, 20)
+    page_num = paginator.num_pages  # 获得分页数量,count()还可以获取内容总数
+    # print(page_num)
+    page_news_list = paginator.page(page)  # 指定页数后的内容列表
+    # print(page_news_list)
+    # page_news_list[0]['origin_str'] = origin_str
+    if page_news_list.has_next():
+        next_page = page + 1
+    else:
+        next_page = page
+    if page_news_list.has_previous():
+        previous_page = page - 1
+    else:
+        previous_page = page
 
+    return render(request, 'Search_List.html',
+                  {
+                      'news_list': page_news_list,
+                      'page_num': range(1, page_num + 1),
+                      'curr_page': page,
+                      'next_page': next_page,
+                      'previous': previous_page
+                  }
+                  )
+    # if words:
+    #     origin_str = urllib.parse.unquote(words)
+    #     the_fuzzy_data = Get_data_from_mongo().get_the_fuzzy_data(origin_str)
+    #     return render(request, 'Search_List.html', {'the_fuzzy_data': the_fuzzy_data})
+    #     # return HttpResponse("ssssss")

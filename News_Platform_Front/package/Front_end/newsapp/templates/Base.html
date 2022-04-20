@@ -40,13 +40,13 @@
             {#                <input type="search" name="q" placeholder="搜索" required>#}
             {#                <button type="submit"><span class="btn-primary"></span></button>#}
             {#            </form>#}
-            <form action="#" method="get" role="search" id="searchform">
+            <form action="/Search" method="get" role="search" id="searchform">
             <div class="col-lg-6">
                 <div class="input-group">
 
-                    <input type="text" class="form-control" placeholder="请输入关键词" name="KeyWorlds">
+                    <input type="search" class="form-control" placeholder="请输入关键词" name="keywords" required>
                     <span class="input-group-btn">
-        <button class="btn btn-default" type="button" onclick="">Go!</button>
+        <button class="btn btn-default" type="submit" onclick="">Go!</button>
       </span>
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->

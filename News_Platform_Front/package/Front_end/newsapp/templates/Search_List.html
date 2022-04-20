@@ -1,0 +1,46 @@
+{% extends "Base.html" %}
+{% block content %}
+    <div class="container">
+
+        <div class="blog-header">
+        </div>
+
+        <div class="row">
+
+            <div class="blog-main">
+
+                <div class="blog-post col-md-12">
+                    {% for data in news_list %}
+                        <h3 class="blog-post-title-home"><a
+                                href="/Show_Detail?news_id={{ data.news_id }}&cate={{ data.category }}">{{ data.title }}</a>
+                        </h3>
+                        <p class="blog-post-meta">{{ data.issue_time }} by <a
+                                href="{{ data.content_url }}">{{ data.information_source }}</a></p>
+                    {% endfor %}
+                </div><!-- /.blog-post -->
+
+            </div><!-- /.blog-main -->
+
+        </div><!-- /.row -->
+        
+        <div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="/Search?page={{ previous_page }}&keywords={{ news_list.0.keywords }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% for num in page_num %}
+                    <li><a href="/Search?page={{ num }}&keywords={{ news_list.0.keywords }}">{{ num }}</a></li>
+                {% endfor %}
+                <li>
+                    <a href="/Search?page={{ next_page }}&keywords={{ news_list.0.keywords }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div><!-- /.container -->
+{% endblock %}
