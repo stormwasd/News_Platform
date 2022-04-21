@@ -40,7 +40,7 @@ class ScrapyCaijingPipeline:
 		return item
 
 	def wirte_to_mongodb(self, item):
-		if not self.connection.find_one({'title': item['title']}):
+		if not self.connection.find_one({'title': item['title']}) and not item['content']:
 			self.connection.insert(
 				{'news_id': item['news_id'], 'category': item['category'], 'content_url': item['content_url'],
 				 'title': item['title'], 'issue_time': item['issue_time'], 'title_image': item['title_image'],

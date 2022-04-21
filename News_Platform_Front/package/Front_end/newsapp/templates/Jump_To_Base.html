@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+<body>
+<p style="text-align: center">温馨提示: 该关键词未搜索到任何资讯！还有<span id="sp">3</span>秒跳转到资讯热点界面...</p>
+<script>
+    onload = function () {
+        setInterval(go, 1000)
+    };
+    var x = 2;
+
+    function go() {
+
+        if (x >= 0) {
+            document.getElementById("sp").innerText = x;
+        } else {
+            location.href = "/home"
+            rel = "external nofollow"
+            rel = "external nofollow";
+        }
+        x--;
+    }
+</script>
+</body>
+
+
+</body>
+</html>

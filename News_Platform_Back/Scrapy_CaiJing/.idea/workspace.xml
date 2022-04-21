@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93607567-3f55-4692-8c0b-a7b9d51934bc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/Img_Upload.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/static/file/template.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Img_Upload/static/file/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/News_Platform_Front_End.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/Front_end.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Front_end/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/Front_end/DjangoMongo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/Front_end/DjangoMongo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/Front_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/Front_end/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/templates/Base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/templates/Base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/templates/Front_Page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/templates/Front_Page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../News_Platform_Front/package/Front_end/newsapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scrapy_CaiJing/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scrapy_KeJi/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scrapy_ShuMa/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +132,7 @@
       <workItem from="1649813785973" duration="6076000" />
       <workItem from="1650078878900" duration="27000" />
       <workItem from="1650273034690" duration="187000" />
+      <workItem from="1650511901524" duration="731000" />
     </task>
     <servers />
   </component>
